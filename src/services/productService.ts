@@ -7,7 +7,6 @@ const syncWithLocalStorage = (products: Product[]) => {
     localStorage.setItem("products", JSON.stringify(products));
 };
 
-// Helper function to load products from localStorage or initialize with mock data
 const loadFromLocalStorage = (): Product[] => {
     const storedProducts = localStorage.getItem("products");
     if (storedProducts) {
