@@ -17,7 +17,6 @@ const loadFromLocalStorage = (): Product[] => {
     }
 };
 
-// Initialize products from localStorage or mock data
 let products = loadFromLocalStorage();
 
 const productService = {
