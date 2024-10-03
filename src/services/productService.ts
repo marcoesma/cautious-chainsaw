@@ -7,6 +7,7 @@ const syncWithLocalStorage = (products: Product[]) => {
     localStorage.setItem("products", JSON.stringify(products));
 };
 
+// Helper function to load products from localStorage or initialize with mock data
 const loadFromLocalStorage = (): Product[] => {
     const storedProducts = localStorage.getItem("products");
     if (storedProducts) {
@@ -17,10 +18,12 @@ const loadFromLocalStorage = (): Product[] => {
     }
 };
 
+// Initialize products from localStorage or mock data
 let products = loadFromLocalStorage();
 
 const productService = {
     getProducts: async (): Promise<Product[]> => {
+        // Fetch products from localStorage
         return new Promise((resolve) => setTimeout(() => resolve(products), 1000));
     },
 
