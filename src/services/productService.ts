@@ -21,7 +21,6 @@ let products = loadFromLocalStorage();
 
 const productService = {
     getProducts: async (): Promise<Product[]> => {
-        // Fetch products from localStorage
         return new Promise((resolve) => setTimeout(() => resolve(products), 1000));
     },
 
