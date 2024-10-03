@@ -55,7 +55,6 @@ const productService = {
             // Generate a description of what changed
             const changeDescription = getChangeDescription(previousProduct, product);
             
-            // Add a new history entry if there are any changes
             if (changeDescription) {
                 const changeEntry: InventoryChange = {
                     date: new Date().toISOString(),
